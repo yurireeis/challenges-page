@@ -1,0 +1,25 @@
+<div class="container-fluid full-height home-container">
+  <div class="row justify-content-center align-items-center full-height">
+    <div
+      *ngFor="let app of applications"
+      class="my-2 col-xl-4 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center text-uppercase text-right background"
+      style="position: relative;color: black;font-weight: 800;height: 150px;width: 300px;border-radius: 10px;"
+      [ngStyle]="{'background': 'url(' + app.image + ') no-repeat center center fixed'}">
+      <div style="position: absolute;left: 10px;top: -6px;padding: 0 6px; background-color: white;">
+        {{ app.name }}
+      </div>
+      <div style="position: absolute;left: 150px;top: 105px;">
+        <button (click)="downloadProject(app.name)" class="btn btn-warning" style="margin-right: 2px;">
+          <img style="width: 20px;height: 20px;" src="../../../assets/icons/download.svg">
+        </button>
+        <button (click)="seeTheDocs(app.docs)" class="btn btn-info">
+          <img style="width: 20px;height: 20px;" src="../../../assets/icons/document.svg">
+        </button>
+        <button class="btn btn-success" style="margin-left: 2px;" (click)="goTo(app.route)">
+          <img style="width: 20px;height: 20px;" src="../../../assets/icons/view.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/catalin-fertu" title="Catalin Fertu">Catalin Fertu</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+</div>

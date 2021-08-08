@@ -1,0 +1,72 @@
+:host {
+  #a {
+    &1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+
+    &2 {
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+
+    &3 {
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+    }
+  }
+
+  #b {
+    &1 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+    }
+
+    &2 {
+      border: 2px solid black;
+    }
+
+    &3 {
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+    }
+  }
+
+  #c {
+    &1 {
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+
+    &2 {
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+
+    &3 {
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+    }
+  }
+
+  .tic-tac-toe {
+    &-container {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      background: url(../../../assets/img/pexels-gdtography-911738.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+
+      &-fields {
+        background-color: #131722;
+      }
+    }
+  }
+}
