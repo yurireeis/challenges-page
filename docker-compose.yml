@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+
+  beatstars-challenge-ui:
+    container_name: beatstars-challenge-ui
+    build: .
+    ports:
+      - "8080:8080"
+    mem_limit: 1024m
