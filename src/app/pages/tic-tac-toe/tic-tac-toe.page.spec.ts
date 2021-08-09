@@ -88,6 +88,7 @@ describe('TicTacToePage', () => {
     component.squareSelected(2, 0);
     spyOn(component.gameStatus, 'subscribe').and.callThrough();
     expect(component.isPlayerOne).toBeTruthy();
+    expect(component.playerOneWins).toBeTruthy();
   });
 
   it('should give victory to player two (circle player)', () => {
@@ -100,6 +101,7 @@ describe('TicTacToePage', () => {
     component.squareSelected(2, 1);
     spyOn(component.gameStatus, 'subscribe').and.callThrough();
     expect(component.isPlayerOne).toBeFalsy();
+    expect(component.playerTwoWins).toBeTruthy();
   });
 
   it('should give tie (draw game)', () => {
@@ -115,6 +117,8 @@ describe('TicTacToePage', () => {
     component.squareSelected(1, 1);
     spyOn(component.gameStatus, 'subscribe').and.callThrough();
     expect(component.tieGame).toBeTruthy();
+    expect(component.playerOneWins).toBeFalsy();
+    expect(component.playerTwoWins).toBeFalsy();
   });
 
   it('should not pass the turn if select the same square (must be player two yet)', () => {
