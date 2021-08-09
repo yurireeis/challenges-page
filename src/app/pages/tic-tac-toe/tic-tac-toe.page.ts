@@ -60,7 +60,7 @@ export class TicTacToePage {
     const selectedColumn = this.currentCondition[y];
     const selectedSquare = selectedColumn.values[x];
 
-    if (selectedSquare.isSelected) { return; }
+    if (selectedSquare.isSelected || this.gameEnded) { return; }
 
     let result = Condition.ON_PROGRESS;
 
