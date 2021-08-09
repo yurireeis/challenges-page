@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
+## Project documentation
+
+This project has ```compodocs``` available to show how the structure was built. Just run the following commands (after installing project and dev dependencies):
+
+```npm run compodoc```
+```npm run docs```
+
+If you're not being successful with these commands, maybe you need to install needed dependencies globally, like:
+
+```npm i -g compodoc```
+```npm i -g serve```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
